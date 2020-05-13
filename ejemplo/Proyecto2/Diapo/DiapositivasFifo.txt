@@ -1,0 +1,52 @@
+FIFO
+	
+	fig1
+
+	* Reset
+	* Pop y Push
+	* Data_in y Data_out
+	* Full y Empty
+	* Almost_Full y Almost_Empty
+
+_________________________________________________
+
+DRAM:
+	fig2
+
+	* Dos puertos
+	* Lectura y Escritura (Dos direcciones)
+	* Simultanea
+		
+_________________________________________________
+
+Resultados DRAM:
+
+	fig3
+
+_________________________________________________
+
+Contadores:
+	*contador Write
+	*contador Read
+	*vuelta Write
+	*vuelta Read
+
+_________________________________________________
+
+Resultados Contadores:
+
+	fig4
+
+_________________________________________________
+
+Lógica para Salidas:
+
+	*if (vueltaR = vuelta W)
+	*Cases contR y contW
+_________________________________________________
+
+Resultados FIFO:
+	fig5
+	
+
+
