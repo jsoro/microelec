@@ -15,7 +15,7 @@ reg rco;
 `include "driver.v"
 `include "checker.v"
 
-parameter ITERATIONS = 100;
+parameter ITERATIONS = 20;
 integer log;
 
 initial begin
