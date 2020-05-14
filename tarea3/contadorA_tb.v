@@ -3,14 +3,15 @@
 
 module contadorA_tb( enable, modo, D, rco, Q, clk);
 
-input [3:0] D;
-output [3:0] Q;
-reg [3:0] Q;
+input [3:0] Q;
+output [3:0] D;
+reg [3:0] D;
 input clk;
-input enable;
-input [1:0] modo;
-output rco;
-reg rco;
+input rco;
+output [1:0] modo;
+reg [1:0] modo;
+output enable;
+reg enable;
 
 `include "driver.v"
 `include "checker.v"
@@ -33,8 +34,8 @@ initial begin
 
   $fdisplay(log, "time=%5d, Starting Test", $time);
   fork
-    drv_request(ITERATIONS);
-    checker(ITERATIONS);
+    drv_request();
+    checker();
   join
   $fdisplay(log, "time=%5d, Test Completed", $time);
   $fdisplay(log, "time=%5d, Simulation Completed", $time);

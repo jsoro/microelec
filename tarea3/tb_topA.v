@@ -3,6 +3,7 @@
 `include "contadorA_tb.v"
 
 module tb_top;
+`include "definitions.v"
 
 clk clocks (.clock (clock));
 
