@@ -11,31 +11,55 @@ endtask
 
 //Drive request to the arbiter
 task drv_request;
+begin
+@(negedge clk);
+enable <= 1'b1;
+D = 4'b0000;
+modo = 2'b00;
+#160 @(negedge clk);
+modo = 2'b01;
+#160 @(negedge clk);
+modo = 2'b10;
+#20 @(negedge clk);
 
-  @(negedge clk) begin
-    enable <= 1'b1;
-    D = 4'b0000;
-    modo = 2'b00;
-    repeat (8) begin
-      @(negedge clk)begin
-        enable = 1;
-      end
-    end
-    @(negedge clk)begin
-      modo = 2'b01;
-    end
-    repeat (8) begin
+end
+endtask
+
+/*
+@(negedge clk) begin
+  enable <= 1'b1;
+  D = 4'b0000;
+  modo = 2'b00;
+  repeat (8) begin
     @(negedge clk)begin
       enable = 1;
     end
-    end
-
-
-
-    /*
-    repeat (8) begin
-      D = 4'b0000;
-    end
-    */
   end
-endtask
+  @(negedge clk)begin
+    modo = 2'b01;
+  end
+  repeat (1) begin
+  @(negedge clk)begin
+    enable = 1;
+  end
+  end
+
+  modo = 2'b10;
+  repeat (8) begin
+    @(negedge clk)begin
+      enable = 1;
+    end
+  end
+
+
+
+end
+*/
+
+
+
+/*
+repeat (8) begin
+  D = 4'b0000;
+end
+*/

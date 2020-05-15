@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 `include "clock.v"
 `include "arbiter.v"
 `include "arbiter_tb.v"
@@ -7,7 +8,7 @@ module tb_top;
 clk clocks (.clock (clock));
 
 arbiter_tb tb(
-.reset (reset), 
+.reset (reset),
 .req0 (req0),
 .req1 (req1),
 .gnt0 (gnt0),
@@ -25,8 +26,3 @@ arbiter dut (
 );
 
 endmodule
-
-
-
-
-

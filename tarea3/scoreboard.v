@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 //Scoreboard
 module scoreboard (D, modo, enable, clk) ;
 

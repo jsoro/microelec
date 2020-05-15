@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 task monitor;
 
 reg [3:0] mon_D;

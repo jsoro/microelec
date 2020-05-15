@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 module clk (clock);
 
 output clock;

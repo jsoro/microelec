@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 // Testbench Code Goes here
 `include "scoreboard.v"
 

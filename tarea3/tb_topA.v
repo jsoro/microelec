@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 `include "clock.v"
 `include "contadorA.v"
 `include "contadorA_tb.v"
