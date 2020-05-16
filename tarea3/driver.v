@@ -24,48 +24,51 @@ D = 4'b0000;
 modo = 2'b00;
 #160 @(negedge clk);
 modo = 2'b01;
-#160 @(negedge clk);
+#80 @(negedge clk);
 modo = 2'b10;
-#20 @(negedge clk);
+#80 @(negedge clk);
+D = 4'b1111;
+#160 @(negedge clk);
+modo = 2'b11;
+#5 @(negedge clk);
+modo =2'b00;
+#50@(negedge clk);
+enable = 0;
+#50@(negedge clk);
+enable = 0;
+#25@(negedge clk);
+enable = 1;
+#25@(negedge clk);
+D = 4'b1111;
+#5 @(negedge clk);
+modo = 2'b01;
+#160 @(negedge clk);
 
 end
 endtask
 
-/*
-@(negedge clk) begin
-  enable <= 1'b1;
-  D = 4'b0000;
-  modo = 2'b00;
-  repeat (8) begin
-    @(negedge clk)begin
-      enable = 1;
+task drv_random_request;
+  begin
+    repeat (20) begin
+      @(negedge clk) begin
+        enable = $random;
+        D = $random;
+      end
     end
   end
-  @(negedge clk)begin
-    modo = 2'b01;
-  end
-  repeat (1) begin
-  @(negedge clk)begin
-    enable = 1;
-  end
-  end
+endtask
 
-  modo = 2'b10;
-  repeat (8) begin
-    @(negedge clk)begin
-      enable = 1;
+task drv_completely_random_request;
+  begin
+    repeat (6) begin
+    @(negedge clk)
+    modo  = $random;
+      repeat (9) begin
+        @(negedge clk) begin
+          enable = $random;
+          D = $random;
+        end
+      end
     end
   end
-
-
-
-end
-*/
-
-
-
-/*
-repeat (8) begin
-  D = 4'b0000;
-end
-*/
+endtask

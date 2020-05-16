@@ -2,6 +2,123 @@ time=    0, Simulation Start
 time=    0, Starting Reset
 time=   30, Reset Completed
 time=   30, Starting Test
+time=   30, Starting Semi Random Test
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+time=  230, Starting Completely Random Test
+PASS
+Time=250 Error dut: Q=0011, rco=1, scoreboard: Q=0011, rco=0
+Time=260 Error dut: Q=0010, rco=1, scoreboard: Q=0010, rco=0
+PASS
+Time=280 Error dut: Q=0011, rco=1, scoreboard: Q=0011, rco=0
+PASS
+PASS
+PASS
+PASS
+Time=330 Error dut: Q=1011, rco=1, scoreboard: Q=1011, rco=0
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+Time=470 Error dut: Q=1001, rco=1, scoreboard: Q=1001, rco=0
+PASS
+Time=490 Error dut: Q=0110, rco=1, scoreboard: Q=0110, rco=0
+PASS
+PASS
+Time=520 Error dut: Q=0010, rco=1, scoreboard: Q=0010, rco=0
+PASS
+Time=540 Error dut: Q=1111, rco=1, scoreboard: Q=1111, rco=0
+Time=550 Error dut: Q=1111, rco=1, scoreboard: Q=1111, rco=0
+Time=560 Error dut: Q=1000, rco=1, scoreboard: Q=1000, rco=0
+Time=570 Error dut: Q=1001, rco=1, scoreboard: Q=1001, rco=0
+Time=580 Error dut: Q=1010, rco=1, scoreboard: Q=1010, rco=0
+PASS
+PASS
+PASS
+Time=620 Error dut: Q=0011, rco=1, scoreboard: Q=0011, rco=0
+Time=630 Error dut: Q=0011, rco=1, scoreboard: Q=0011, rco=0
+Time=640 Error dut: Q=0100, rco=1, scoreboard: Q=0100, rco=0
+Time=650 Error dut: Q=0100, rco=1, scoreboard: Q=0100, rco=0
+Time=660 Error dut: Q=0110, rco=1, scoreboard: Q=0110, rco=0
+PASS
+Time=680 Error dut: Q=1010, rco=1, scoreboard: Q=1010, rco=0
+Time=690 Error dut: Q=0101, rco=1, scoreboard: Q=0101, rco=0
+Time=700 Error dut: Q=1001, rco=1, scoreboard: Q=1001, rco=0
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+Time=770 Error dut: Q=1010, rco=1, scoreboard: Q=1010, rco=0
+time=  830, Starting Scripted Test
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+Time=1330 Error dut: Q=1111, rco=1, scoreboard: Q=1111, rco=0
 PASS
 PASS
 PASS
@@ -62,5 +179,95 @@ PASS
 PASS
 PASS
 PASS
-time=  630, Test Completed
-time=  630, Simulation Completed
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+time= 2830, Test Completed
+time= 2830, Simulation Completed

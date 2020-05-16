@@ -34,6 +34,18 @@ initial begin
   $fdisplay(log, "time=%5d, Reset Completed", $time);
 
   $fdisplay(log, "time=%5d, Starting Test", $time);
+
+  $fdisplay(log, "time=%5d, Starting Semi Random Test", $time);
+  fork
+    drv_random_request();
+    random_checker();
+  join
+  $fdisplay(log, "time=%5d, Starting Completely Random Test", $time);
+  fork
+    drv_completely_random_request();
+    completely_random_checker();
+  join
+  $fdisplay(log, "time=%5d, Starting Scripted Test", $time);
   fork
     drv_request();
     checker();

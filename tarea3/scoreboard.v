@@ -93,7 +93,10 @@ begin
     //   sb_state[1:0] = 2'b00;
     // end
   end
-
+  else begin
+    sb_Q[3:0] = 4'b0000;
+    sb_rco = 1'b0;
+  end
 end
 
 endmodule
