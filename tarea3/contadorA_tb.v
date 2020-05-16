@@ -17,7 +17,7 @@ reg enable;
 `include "driver.v"
 `include "checker.v"
 
-parameter ITERATIONS = 20;
+
 integer log;
 
 initial begin

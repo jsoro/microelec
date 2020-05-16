@@ -3,9 +3,15 @@ task drv_init;
   begin
     @(negedge clk) begin
       enable <= 1'b1;
-      D = 4'b0000;
+      D = 4'b1111;
       modo = 2'b11;
     end
+    @(negedge clk) begin
+      enable = 1;
+      modo = 2'b00;
+    end
+    @(negedge clk)
+      enable = 1;
   end
 endtask
 

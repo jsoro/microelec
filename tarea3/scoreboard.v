@@ -8,6 +8,7 @@ input enable;
 input [1:0] modo;
 
 
+
 //wire  sb_rco;
 reg sb_rco;
 reg [3:0] sb_Q;
@@ -16,6 +17,7 @@ reg [3:0] sb_Q;
 always @(posedge clk)
 begin
   if (enable == 1'b1) begin
+
     if (modo == 2'b00) begin//Check add 1
 
       if (sb_rco == 1'b1) begin //Check carry out
@@ -73,6 +75,10 @@ begin
 
     end
     if (modo == 2'b11) begin
+      if (sb_rco == 1'b1) begin //Check carry out
+        sb_rco = 1'b0;
+      end
+
       sb_Q[3:0] = D;
       sb_rco = 1'b0;
     end

@@ -1,7 +1,66 @@
 time=    0, Simulation Start
 time=    0, Starting Reset
-time=   10, Reset Completed
-time=   10, Starting Test
-Time=15 Error dut: Q=xxxx, rco=x, scoreboard: Q=xxxx, rco=x
-time=  360, Test Completed
-time=  360, Simulation Completed
+time=   30, Reset Completed
+time=   30, Starting Test
+PASS
+Time=50 Error dut: Q=0010, rco=1, scoreboard: Q=0010, rco=0
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+Time=120 Error dut: Q=1001, rco=1, scoreboard: Q=1001, rco=0
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+Time=210 Error dut: Q=0000, rco=1, scoreboard: Q=0000, rco=0
+Time=220 Error dut: Q=1111, rco=0, scoreboard: Q=1111, rco=1
+Time=230 Error dut: Q=1110, rco=1, scoreboard: Q=1110, rco=0
+Time=240 Error dut: Q=1101, rco=1, scoreboard: Q=1101, rco=0
+Time=250 Error dut: Q=1100, rco=1, scoreboard: Q=1100, rco=0
+Time=260 Error dut: Q=1011, rco=1, scoreboard: Q=1011, rco=0
+Time=270 Error dut: Q=1010, rco=1, scoreboard: Q=1010, rco=0
+Time=280 Error dut: Q=1001, rco=1, scoreboard: Q=1001, rco=0
+Time=290 Error dut: Q=1000, rco=1, scoreboard: Q=1000, rco=0
+Time=300 Error dut: Q=0111, rco=1, scoreboard: Q=0111, rco=0
+Time=310 Error dut: Q=0110, rco=1, scoreboard: Q=0110, rco=0
+Time=320 Error dut: Q=0101, rco=1, scoreboard: Q=0101, rco=0
+Time=330 Error dut: Q=0100, rco=1, scoreboard: Q=0100, rco=0
+Time=340 Error dut: Q=0011, rco=1, scoreboard: Q=0011, rco=0
+Time=350 Error dut: Q=0010, rco=1, scoreboard: Q=0010, rco=0
+Time=360 Error dut: Q=0001, rco=1, scoreboard: Q=0001, rco=0
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+Time=510 Error dut: Q=0100, rco=1, scoreboard: Q=0100, rco=0
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+PASS
+time=  630, Test Completed
+time=  630, Simulation Completed
