@@ -22,10 +22,10 @@ integer log;
 
 initial begin
 
-  $dumpfile("contadorC_verif.vcd");
+  $dumpfile("output/gtkwave/contadorC_verif.vcd");
   $dumpvars(0);
 
-  log = $fopen("tbC.log");
+  log = $fopen("output/logs/tbC.log");
   $fdisplay(log, "time=%5d, Simulation Start", $time);
   $fdisplay(log, "time=%5d, Starting Reset", $time);
 

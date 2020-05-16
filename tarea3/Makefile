@@ -3,39 +3,54 @@ all:
 	make counterB
 	make counterC
 	make gtk
-	
+
+iverilog:
+	iverilog -o output/bin/counter_compileA tb_topA.v
+	iverilog -o output/bin/counter_compileB tb_topB.v
+	iverilog -o output/bin/counter_compileC tb_topC.v
+
 vvp:
-	vvp counter_compile
+	vvp output/bin/counter_compileA
+	vvp output/bin/counter_compileB
+	vvp output/bin/counter_compileC
 
 gtk:
-	gtkwave contadorA_verif.vcd &
-	gtkwave contadorB_verif.vcd &
-	gtkwave contadorC_verif.vcd
+	gtkwave output/gtkwave/contadorA_verif.vcd &
+	gtkwave output/gtkwave/contadorB_verif.vcd &
+	gtkwave output/gtkwave/contadorC_verif.vcd
 
 bread:
-	iverilog -o counter_compile tb_topA.v
-	vvp counter_compile
-	gtkwave contadorA_verif.vcd &
+	iverilog -o output/bin/counter_compile tb_topA.v
+	vvp output/bin/counter_compile
+	gtkwave output/gtkwave/contadorA_verif.vcd &
 
 counterA:
-	iverilog -o counter_compileA tb_topA.v
-	vvp counter_compileA
+	iverilog -o output/bin/counter_compileA tb_topA.v
+	vvp output/bin/counter_compileA
 
 counterB:
-	iverilog -o counter_compileB tb_topB.v
-	vvp counter_compileB
+	iverilog -o output/bin/counter_compileB tb_topB.v
+	vvp output/bin/counter_compileB
 
-counterA:
-	iverilog -o counter_compileC tb_topC.v
-	vvp counter_compileC
+counterC:
+	iverilog -o output/bin/counter_compileC tb_topC.v
+	vvp output/bin/counter_compileC
+
+logs:
+	make counterA
+	make counterB
+	make counterC
+	echo Counter A Log File
+	cat output/logs/tbA.log
+	echo ___________________________________________________________________________
+	echo Counter B Log File
+	cat output/logs/tbB.log
+	echo ___________________________________________________________________________
+	echo Counter C Log File
+	cat output/logs/tbC.log
+
 
 clean:
-	rm contadorA_verif.vcd
-	rm contadorB_verif.vcd
-	rm contadorC_verif.vcd
-	rm counter_compileA
-	rm counter_compileB
-	rm counter_compileC
-	rm tbA.log
-	rm tbB.log
-	rm tbC.log
+	rm  output/gtkwave/*
+	rm  output/bin/*
+	rm  output/logs/*
