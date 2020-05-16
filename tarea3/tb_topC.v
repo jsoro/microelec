@@ -1,28 +1,29 @@
 `timescale 1ns/1ps
 `include "clock.v"
-`include "arbiter.v"
-`include "arbiter_tb.v"
+`include "contadorC.v"
+`include "contadorC_tb.v"
 
 module tb_top;
+`include "definitions.v"
 
 clk clocks (.clock (clock));
 
-arbiter_tb tb(
-.reset (reset),
-.req0 (req0),
-.req1 (req1),
-.gnt0 (gnt0),
-.gnt1 (gnt1),
+contadorC_tb tb(
+.D (D),
+.Q (Q),
+.enable (enable),
+.modo (modo),
+.rco (rco),
 .clk (clock)
 );
 
-arbiter dut (
-.clock (clock),
-.reset (reset),
-.req_0 (req0),
-.req_1 (req1),
-.gnt_0 (gnt0),
-.gnt_1 (gnt1)
+count dut (
+.D (D),
+.Q (Q),
+.enable (enable),
+.modo (modo),
+.rco (rco),
+.clk (clock)
 );
 
 endmodule

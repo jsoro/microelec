@@ -1,7 +1,0 @@
-time=    0, Simulation Start
-time=    0, Starting Reset
-time=   10, Reset Completed
-time=   10, Starting Test
-Time=15 Error dut: Q=xxxx, rco=x, scoreboard: Q=xxxx, rco=x
-time=  360, Test Completed
-time=  360, Simulation Completed

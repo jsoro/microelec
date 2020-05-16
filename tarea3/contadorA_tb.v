@@ -25,7 +25,7 @@ initial begin
   $dumpfile("contadorA_verif.vcd");
   $dumpvars(0);
 
-  log = $fopen("tb.log");
+  log = $fopen("tbA.log");
   $fdisplay(log, "time=%5d, Simulation Start", $time);
   $fdisplay(log, "time=%5d, Starting Reset", $time);
 

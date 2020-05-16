@@ -1,16 +1,23 @@
+`timescale 1ns/1ps
 // Testbench Code Goes here
 `include "scoreboard.v"
 
-module arbiter_tb( reset, req0, req1, gnt0, gnt1, clk);
+module contadorC_tb( enable, modo, D, rco, Q, clk);
 
-output reset, req0, req1;
-reg    reset, req0, req1;
-input  gnt0,  gnt1, clk;
+input [3:0] Q;
+output [3:0] D;
+reg [3:0] D;
+input clk;
+input rco;
+output [1:0] modo;
+reg [1:0] modo;
+output enable;
+reg enable;
 
 `include "driver.v"
 `include "checker.v"
 
-parameter ITERATIONS = 100;
+parameter ITERATIONS = 20;
 integer log;
 
 initial begin
@@ -18,7 +25,7 @@ initial begin
   $dumpfile("contadorC_verif.vcd");
   $dumpvars(0);
 
-  log = $fopen("tb.log");
+  log = $fopen("tbC.log");
   $fdisplay(log, "time=%5d, Simulation Start", $time);
   $fdisplay(log, "time=%5d, Starting Reset", $time);
 
@@ -28,8 +35,8 @@ initial begin
 
   $fdisplay(log, "time=%5d, Starting Test", $time);
   fork
-    drv_request(ITERATIONS);
-    checker(ITERATIONS);
+    drv_request();
+    checker();
   join
   $fdisplay(log, "time=%5d, Test Completed", $time);
   $fdisplay(log, "time=%5d, Simulation Completed", $time);
@@ -39,8 +46,9 @@ end
 
 scoreboard sb(
 .clk (clk),
-.req0 (req0),
-.req1 (req1)
+.D (D),
+.enable (enable),
+.modo (modo)
 );
 
 endmodule
