@@ -1,0 +1,23 @@
+Every output file generated is placed in the output folder; the outputs generated (while executing "make all")
+include a bin folder with all the compiled verilog files. A logs folder where all the log files for each counter
+are stored. A gtkwave where all the .vcd files are stored for GtkWave visualization. Moreover when this .vcd
+files are opened using this makefile; a data formating script is executed to add the signals with predefined
+colors and a PDF file showing the scope is automatically generated for each counter
+
+-To generate the complete verification test (with visualization) in the three counter and the comparison use "make" (or "make all").
+
+-To just compile the .v file execute "make iverilog"
+
+-To execute the previously generated compiled files execute "make vvp"
+
+-To see the execution results in gtkwave of the three counters use "make gtk"
+
+-You can compile the three counters independently by executing "make counterA", "make counterB" or "make counterC" to compile, execute and visualize the respective counter
+
+-To compile, execute and visualize just the comparison test use "make comparison"
+
+-To generate and print in console the log files generated execute "make logs" (in case of a previous generation you can execute "make showlogs" to show the previously generated log files)
+
+-To read this file use "make help"
+
+-To clean every output previously generated execute "make clean"

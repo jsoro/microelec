@@ -1,0 +1,17 @@
+read_verilog counter.v
+
+hierarchy -check -top count
+
+proc; opt; fsm; opt; memory; opt
+
+
+techmap; opt
+
+dfflibmap -liberty config/cmos_cells.lib
+
+abc -liberty config/cmos_cells.lib
+
+
+clean
+
+write_verilog contador_synt.v

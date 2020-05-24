@@ -80,7 +80,7 @@ begin
       end
 
       sb_Q[3:0] = D;
-      sb_rco = 1'b0;
+      sb_rco = 1'b1;
     end
 
     // if (D == 4'b0000 && sb_state[1:0] != 2'b10) begin

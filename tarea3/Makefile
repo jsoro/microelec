@@ -19,26 +19,25 @@ vvp:
 	vvp output/bin/counter_compare_compile
 
 gtk:
-	gtkwave output/gtkwave/contadorA_verif.vcd &
-	gtkwave output/gtkwave/contadorB_verif.vcd &
-	gtkwave output/gtkwave/contadorC_verif.vcd &
+	gtkwave output/gtkwave/contadorA_verif.vcd -S config/counterA.tcl &
+	gtkwave output/gtkwave/contadorB_verif.vcd -S config/counterB.tcl &
+	gtkwave output/gtkwave/contadorC_verif.vcd -S config/counterC.tcl &
 	gtkwave output/gtkwave/comparison_verif.vcd  -S config/compare.tcl &
 
 counterA:
 	make ghidorah
-	gtkwave output/gtkwave/contadorA_verif.vcd
+	gtkwave output/gtkwave/contadorA_verif.vcd -S config/counterA.tcl
 
 counterB:
 	make gigan
-	gtkwave output/gtkwave/contadorB_verif.vcd
+	gtkwave output/gtkwave/contadorB_verif.vcd -S config/counterB.tcl
 
 counterC:
 	make mothra
-	gtkwave output/gtkwave/contadorC_verif.vcd
+	gtkwave output/gtkwave/contadorC_verif.vcd -S config/counterC.tcl
 
 comparison:
-	iverilog -o output/bin/counter_compare_compile tb_top_compare.v
-	vvp output/bin/counter_compare_compile
+	make godzilla
 	gtkwave output/gtkwave/comparison_verif.vcd  -S config/compare.tcl
 
 godzilla:
@@ -79,9 +78,11 @@ bread:
 	make showlogs
 	gtkwave output/gtkwave/comparison_verif.vcd  -S config/compare.tcl
 
+help:
+	cat Readme
 
 clean:
 	rm  output/gtkwave/*
 	rm  output/bin/*
 	rm  output/logs/*
-	rm output/comparison.pdf
+	rm output/*.pdf
