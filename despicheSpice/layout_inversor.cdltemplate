@@ -1,0 +1,17 @@
+cdlInKeys = list(nil
+    'searchPath             "layout_inversor.cdl"
+    'cdlFile                "/home/sorojara/Documents/microelec/despicheSpice/layout_inversor.cdl"
+    'userSkillFile          ""
+    'opusLib                ""
+    'primaryCell            "layout_inversor"
+    'caseSensitivity        "lower"
+    'hierarchy              "flatten"
+    'cellTable              ""
+    'viewName               "netlist"
+    'viewType               ""
+    'pr                     nil
+    'skipDevice             nil
+    'schemaLib              "sample"
+    'refLib                 ""
+    'globalNodeExpand       "full"
+)

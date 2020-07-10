@@ -1,0 +1,15 @@
+*** spice3f4/newcoms.c	Sun Mar  7 16:30:58 1993
+--- spice3f5/newcoms.c	Wed Feb 23 22:39:55 1994
+***************
+*** 151,156 ****
+--- 151,160 ----
+  	    /* Copy from the first */
+  	    vname = cp_unquote(wl->wl_word);
+  	    dv = vec_get(vname);
++ 	    if (!dv) {
++ 		printf("'%s' reference vector not found\n", vname);
++ 		return;
++ 	    }
+  	    numdims = dv->v_numdims;
+  	    dims = dv->v_dims;
+  	    wl = wl->wl_next;

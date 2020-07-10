@@ -1,0 +1,2 @@
+LDFLAGS -ltermcap -lm
+LIBX -L/usr/X11R6/lib -lXaw -lXt -lXext -lXmu -lSM -lICE -lX11

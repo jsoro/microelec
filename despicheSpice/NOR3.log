@@ -1,0 +1,50 @@
+Circuit: *** SPICE deck for cell NOR3{lay} from library inversor
+
+Error on line 8 : mnmos@0 y b gnd gnd n l=0.4u w=1u as=5.84p ad=3.18p ps=15.2u pd=10.8u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 9 : mnmos@1 y c gnd gnd n l=0.4u w=1u as=5.84p ad=3.18p ps=15.2u pd=10.8u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 10 : mnmos@2 y a gnd gnd n l=0.4u w=1u as=5.84p ad=3.18p ps=15.2u pd=10.8u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 11 : mpmos@0 net@3 b net@2 vdd p l=0.4u w=2u as=5.56p ad=5.78p ps=11.2u pd=9.6u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 12 : mpmos@1 y c net@3 vdd p l=0.4u w=2u as=5.78p ad=3.18p ps=9.6u pd=10.8u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 13 : mpmos@2 net@2 a vdd vdd p l=0.4u w=2u as=15.56p ad=5.56p ps=37.2u pd=11.2u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Direct Newton iteration for .op point succeeded.
+Changing Tseed to 1e-010
+Changing Tseed to 1e-012
+Changing Tseed to 1e-009
+Changing Tseed to 1e-013
+
+Date: Sat Jun 13 00:35:14 2020
+Total elapsed time: 4.033 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 4757
+traniter = 4733
+tranpoints = 1872
+accept = 1704
+rejected = 164
+matrix size = 11
+fillins = 0
+solver = Normal
+Matrix Compiler1: 486 bytes object code size  0.9/0.7/[0.5]
+Matrix Compiler2: off  [0.6]/0.7/1.0
+
+

@@ -1,0 +1,30 @@
+*** spice3f5/src/lib/inp/inpdomod.c	Sun Sep 22 00:28:47 1996
+--- spice3f4/src/lib/inp/inpdomod.c	Wed Nov 30 13:48:16 1994
+***************
+*** 114,129 ****
+                              "Device type BSIM3 not available in this binary\n");
+                  }
+                  break;         
+!            case 8:
+!                 type = INPtypelook("BSIM3");
+!                 if(type < 0) {
+!                     err = INPmkTemp(
+!                             "Device type BSIM3 not available in this binary\n");
+!                 }
+!                 break;         
+!             default: /* placeholder; use level 9 for the next model */
+  		err = INPmkTemp(
+! 		  "Only MOS device levels 1-8 are supported in this binary\n");
+                  break;
+          }
+          INPmakeMod(modname,type,image);
+--- 114,122 ----
+                              "Device type BSIM3 not available in this binary\n");
+                  }
+                  break;
+!             default: /* placeholder; use level 8 for the next model */
+  		err = INPmkTemp(
+! 		  "Only MOS device levels 1-7 are supported in this binary\n");
+                  break;
+          }
+          INPmakeMod(modname,type,image);

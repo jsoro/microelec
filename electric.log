@@ -1,0 +1,31 @@
+Electric Version 9.07
+--------------- 0 --------------
+  Sat Jun 13 11:23:34 CDT 2020
+Menu Activated: File | Open Library...
+--------------- 1 --------------
+  Sat Jun 13 11:23:43 CDT 2020
+Menu Activated: File | Save Library As...
+--------------- 2 --------------
+  Sat Jun 13 11:24:04 CDT 2020
+Menu Activated: Tools | Simulation (Spice) | Write Spice Deck...
+--------------- 3 --------------
+  Sat Jun 13 11:24:27 CDT 2020
+ProcessKeyBinding 401 when=1592065467443 modifiers=200 code=12 char=ffff false false
+--------------- 4 --------------
+  Sat Jun 13 11:27:41 CDT 2020
+ProcessKeyBinding 401 when=1592065661175 modifiers=200 code=12 char=ffff false false
+--------------- 5 --------------
+  Sat Jun 13 11:31:59 CDT 2020
+Menu Activated: Window | Fill Window
+--------------- 6 --------------
+  Sat Jun 13 11:32:01 CDT 2020
+ProcessKeyBinding 401 when=1592065921093 modifiers=200 code=12 char=ffff false false
+--------------- 7 --------------
+  Sat Jun 13 11:32:02 CDT 2020
+ProcessKeyBinding 401 when=1592065922458 modifiers=200 code=12 char=ffff false false
+--------------- 8 --------------
+  Sat Jun 13 11:33:34 CDT 2020
+ProcessKeyBinding 401 when=1592066014248 modifiers=200 code=12 char=ffff false false
+--------------- 9 --------------
+  Sat Jun 13 11:34:10 CDT 2020
+ProcessKeyBinding 401 when=1592066050656 modifiers=200 code=12 char=ffff false false

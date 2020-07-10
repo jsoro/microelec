@@ -1,0 +1,97 @@
+*** spice3f4/grid.c	Sun Apr 25 14:53:11 1993
+--- spice3f5/grid.c	Sat Jan 29 10:47:59 1994
+***************
+*** 17,22 ****
+--- 17,23 ----
+  #include "suffix.h"
+  
+  #define RAD_TO_DEG	(180.0 / M_PI)
++ #define LABEL_CHARS	20
+  
+  static double *lingrid(), *loggrid();
+  static void polargrid(), smithgrid();
+***************
+*** 225,231 ****
+      int max;
+      static double dd[2];
+      int mult = 1;
+!     char buf[16], *s;
+      int slim, digits;
+  
+      if (axis == y_axis && graph->grid.ysized) {
+--- 226,232 ----
+      int max;
+      static double dd[2];
+      int mult = 1;
+!     char buf[LABEL_CHARS], *s;
+      int slim, digits;
+  
+      if (axis == y_axis && graph->grid.ysized) {
+***************
+*** 477,483 ****
+  drawlingrid(graph, units, spacing, nsp, dst, lmt, hmt, onedec, mult, mag,
+      digits, axis)
+      GRAPH *graph;
+!     char units[16];
+      bool onedec;
+      int nsp, spacing, mult;
+      double hmt, lmt, dst;
+--- 478,484 ----
+  drawlingrid(graph, units, spacing, nsp, dst, lmt, hmt, onedec, mult, mag,
+      digits, axis)
+      GRAPH *graph;
+!     char *units;
+      bool onedec;
+      int nsp, spacing, mult;
+      double hmt, lmt, dst;
+***************
+*** 488,494 ****
+  
+      int i, j;
+      double m, step;
+!     char buf[16];
+  
+      /* i counts how many pixels we have drawn, and j counts which unit
+       * we are at.
+--- 489,495 ----
+  
+      int i, j;
+      double m, step;
+!     char buf[LABEL_CHARS];
+  
+      /* i counts how many pixels we have drawn, and j counts which unit
+       * we are at.
+***************
+*** 567,573 ****
+      double k;
+      double decs;
+      double mag, gain;
+!     char buf[32], *s;
+  
+      if (axis == x_axis && graph->grid.xsized) {
+        lmt = graph->grid.xaxis.log.lmt;
+--- 568,574 ----
+      double k;
+      double decs;
+      double mag, gain;
+!     char buf[LABEL_CHARS], *s;
+  
+      if (axis == x_axis && graph->grid.xsized) {
+        lmt = graph->grid.xaxis.log.lmt;
+***************
+*** 671,677 ****
+  {
+      int i, j, k, l, m;
+      double t;
+!     char buf[16];
+  
+      /* Now plot every pp'th decade line, with subs lines between them. */
+      if (subs > 1)
+--- 672,678 ----
+  {
+      int i, j, k, l, m;
+      double t;
+!     char buf[LABEL_CHARS];
+  
+      /* Now plot every pp'th decade line, with subs lines between them. */
+      if (subs > 1)

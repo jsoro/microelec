@@ -1,0 +1,58 @@
+Circuit: *** SPICE deck for cell AOI22{lay} from library inversor
+
+Error on line 8 : mnmos@0 gnd b net@0 gnd n l=0.4u w=1u as=3.16p ad=10.14p ps=8.6u pd=24.8u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 9 : mnmos@1 net@24 c y gnd n l=0.4u w=1u as=2.67p ad=3.01p ps=8.7u pd=7.9u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 10 : mnmos@2 net@0 a y gnd n l=0.4u w=1u as=2.67p ad=3.16p ps=8.7u pd=8.6u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 11 : mnmos@3 gnd d net@24 gnd n l=0.4u w=1u as=3.01p ad=10.14p ps=7.9u pd=24.8u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 12 : mpmos@0 y b net@2 vdd p l=0.4u w=2u as=3.74p ad=2.67p ps=11.8u pd=8.7u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 13 : mpmos@1 net@2 c vdd vdd p l=0.4u w=2u as=19.2p ad=3.74p ps=25.2u pd=11.8u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 14 : mpmos@2 y a net@2 vdd p l=0.4u w=2u as=3.74p ad=2.67p ps=11.8u pd=8.7u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Error on line 15 : mpmos@3 net@2 d vdd vdd p l=0.4u w=2u as=19.2p ad=3.74p ps=25.2u pd=11.8u
+	 Unable to find definition of model "w"
+	
+	* Error:  No unlabeled parameter permitted for MOSFET's
+Direct Newton iteration for .op point succeeded.
+Changing Tseed to 1e-010
+Changing Tseed to 1e-012
+Changing Tseed to 1e-009
+Changing Tseed to 1e-013
+
+Date: Sat Jun 13 00:39:09 2020
+Total elapsed time: 5.233 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 7386
+traniter = 7361
+tranpoints = 2707
+accept = 2356
+rejected = 347
+matrix size = 14
+fillins = 0
+solver = Normal
+Matrix Compiler1: 654 bytes object code size  1.2/0.9/[0.6]
+Matrix Compiler2: off  [1.0]/1.1/1.5
+
+

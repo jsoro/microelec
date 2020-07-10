@@ -1,0 +1,12 @@
+SPICE_HOST
+SPICED_LOG
+DEFAULT_EDITOR vi
+ASCII_RAWFILE 1
+VERSION_REVISION 3f5
+NOTICE
+DEVICES asrc bjt bsim1 bsim2 bsim3 cap cccs ccvs csw dio ind isrc jfet ltra mes mos1 mos2 mos3 mos6 res sw tra urc vccs vcvs vsrc
+ANALYSES op dc tf ac tran pz disto noise sense
+S_SPICE_EXEC_DIR /usr/local/spice/bin
+S_SPICE_LIB_DIR /usr/local/spice/lib
+BUG_ADDR
+OPT_CHAR -
