@@ -82,7 +82,7 @@ begin
     if (modo == 2'b11) begin
 
       sb_Q[3:0] = D;
-      sb_rco = 1'b1;
+      sb_rco = 1'b0;
     end
   end else begin
     sb_Q = 4'b0000;
@@ -91,6 +91,11 @@ begin
 
 
   end//enable
+end
+
+always @(negedge clk)
+begin
+  sb_rco = 1'b0;
 end
 
 endmodule

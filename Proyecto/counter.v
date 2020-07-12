@@ -3,8 +3,8 @@ module count (enable, clk, modo, D, rco, Q, reset);
 //Define output ports
 output [3:0] Q;
 output rco;
-reg [3:0] Q;
-reg rco;
+reg [3:0] Q = 4'b0000;
+reg rco = 0;
 
 //define input ports
 input  [3:0] D;
@@ -16,8 +16,8 @@ wire [3:0] D;
 wire [1:0] modo;
 wire clock,enable, reset;
 
-reg[3:0]  Qstatus;
-reg RCOstatus;
+reg[3:0]  Qstatus= 4'b0000;
+reg RCOstatus= 0;
 
 //-------------Internal Constants--------------------------
 parameter SIZE = 3           ;
@@ -41,6 +41,7 @@ always @ (posedge clk) begin
         rco = 1'b1;
       end else begin
         Q[3:0] = Q + 4'b0001;
+        rco = 1'b0;
       end
 
       MINUSONE : if (Q==4'b0000) begin
@@ -48,6 +49,7 @@ always @ (posedge clk) begin
         rco = 1'b1;
       end else begin
         Q[3:0] = Q - 4'b0001;
+        rco = 1'b0;
       end
 
       MINUSTHREE : if (Q==4'b0000) begin
@@ -61,11 +63,12 @@ always @ (posedge clk) begin
         rco = 1'b1;
       end else begin
         Q[3:0] = Q - 4'b0011;
+        rco = 1'b0;
       end
 
       LOAD: begin
         Q[3:0] = D;
-        rco = 1'b1;
+        rco = 1'b0;
         end
 
      endcase
@@ -74,8 +77,8 @@ always @ (posedge clk) begin
     end else begin
       Q[3:0] = 4'b0000;
       rco = 1'b0;
-      RCOstatus = rco;
-      Qstatus = Q;
+      RCOstatus = 0;
+      Qstatus = 4'b0000;
     end
   end//end enb
   else begin
@@ -84,4 +87,9 @@ always @ (posedge clk) begin
   end
 
 end//end always
+
+always @ (negedge clk) begin
+  rco=1'b0;
+  RCOstatus=1'b0;
+end
 endmodule // End of Module counter
